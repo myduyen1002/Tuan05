@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="number1" id="num1" placeholder="Nhập a">
+    <input type="text" name="number2" id="num2" placeholder="Nhập b">
+    <button onclick="Checking()">Check</button>
+    <p id="result"></p>
+    <script>
+        function Checking() {
+            const noidung1 = document.getElementById("num1").value;
+            const noidung2 = document.getElementById("num2").value;
+            const inra = document.getElementById("result");
+            const tong = parseFloat(noidung1) + parseFloat(noidung2)
+            if (noidung1 == "" || noidung2 == "") {
+                inra.innerText = "Chưa nhập số"
+                return
+            }
+            if (isNaN(noidung1) || isNaN(noidung2)) {
+                inra.innerText = "Bạn nhập không phải là số"
+                return
+            } else(
+                inra.innerHTML = "Kết quả là: " + tong
+            )
+        }
+    </script>
+</body>
+
+</html>
