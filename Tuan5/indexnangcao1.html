@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .success {
+        background-color: green;
+        height: 40px;
+        width: 100px;
+        color: aliceblue;
+    }
+    
+    .error {
+        background-color: red;
+        height: 40px;
+        width: 100px;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <input type="text" name="" id="number" placeholder="Nhập vào số:">
+    <button onclick="checking()"> Check </button>
+    <p id="result"></p>
+    <script>
+        function checking() {
+            const number = document.getElementById("number").value;
+            const inra = document.getElementById("result");
+
+            if (number === "") {
+                inra.innerText = "error"
+                inra.className = "error"
+
+            } else if (isNaN(number)) {
+                inra.innerText = "error"
+                inra.className = "error"
+            } else {
+                inra.innerText = "success"
+                inra.className = "success"
+            }
+        }
+    </script>
+</body>
+
+</html>
